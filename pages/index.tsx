@@ -16,6 +16,7 @@ export default function Home({scoreCookie}: HomeProps) {
   const [result, setResult] = useState<'YOU WIN' | 'YOU LOSE' | 'DRAW'>();
   const [score, setScore] = useState(scoreCookie ?? 0);
   const [isFinished, setIsFinished] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   function beginPlay(choice: 'rock' | 'paper' | 'scissors'){
       setIsPlaying(true);
@@ -95,7 +96,11 @@ export default function Home({scoreCookie}: HomeProps) {
   useEffect(() =>{
     Cookies.set(`scoreCookie`, String(score));
   },[score])
-  
+
+  function toggleModal(){
+    setShowModal(!showModal);
+  }
+
 
   return (
     <div className={styles.container}>
