@@ -10,13 +10,15 @@
   justify-content: space-between;
   align-items: center;
   border: 4px solid var(--header-outline);
-  margin: 2rem;
+  margin-top: 4rem;
+  margin-left: 15rem;
+  margin-right: 15rem;
   border-radius: 10px;
   padding: 0.68rem;
 }
 
-.container img{
-  height: 2.94rem;
+.container header img{
+  height: 4rem;
 }
 
 .container p{
@@ -25,7 +27,7 @@
 
 .scoreContainer{
   background-color: white;
-  width: 4.75rem;
+  width: 6.5rem;
   height: 4.75rem;
   display: flex;
   justify-content: center;
@@ -69,9 +71,12 @@
 }
 
 .gamingContainer{
-  display: grid;
-  flex: 1;
-  padding: 2.5rem;
+  display: flex;
+  padding-left: 17.5rem;
+  padding-right: 10.5rem;
+  padding-bottom: 10.5rem;
+  padding-top: 5rem;
+  align-items: center;
   grid-template-areas: 
   "playerChoice computerChoice"
     "result result"
@@ -79,8 +84,8 @@
 }
 
 .playerChoiceContainer{
-  margin-right: 2rem;
   grid-area: playerChoice;
+  padding-right: 5rem;
 }
 
 .resultContainer{
@@ -88,7 +93,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4rem;
 }
 
 .resultContainer p{
@@ -98,13 +102,14 @@
 }
 
 .resultContainer button{
-  height: 3rem;
-  width: 13.62rem;
-  border-radius: 10px;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 5px;
   border: none;
   margin-top: 1.65rem;
   font-size: 0.75rem;
   font-weight: 600;
+  color:var(--score-text);
 }
 
 .playerChoiceContainer,.computerChoiceContainer{
@@ -122,6 +127,7 @@
 }
 .computerChoiceContainer{
   grid-area: computerChoice;
+  padding-left: 5rem;
 }
 .computerChoiceContainer span{
   height: 6.25rem;
@@ -131,4 +137,24 @@
 } 
 .computerChoiceContainer p{
   color: white;
+}
+
+.container footer{
+  display: flex;
+  justify-content: right;
+  padding: 3.5rem;
+  float: left;
+}
+
+.rulesButton{
+  border: 0.5px solid white;
+  background: transparent;
+  height: 2.1rem;
+  color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+  border-radius: 5px;
+  font-size: 10px;
 }

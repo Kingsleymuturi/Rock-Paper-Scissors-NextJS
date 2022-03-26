@@ -3,6 +3,7 @@ import Cookies from 'js-cookie';
 import { GetServerSideProps } from 'next';
 import styles from '../styles/Index.module.css';
 import { Button } from '../components/button';
+import { RulesModal } from '../components/Rules';
 
 interface HomeProps{
   scoreCookie: number;
@@ -124,14 +125,15 @@ export default function Home({scoreCookie}: HomeProps) {
               <div className={styles.gamingWrapper}>
                 <div className={styles.gamingContainer}>
                   <div className={styles.playerChoiceContainer}>
+                    <p>YOU PICKED</p>
+                    <span>
                       <Button 
                         disable={isPlaying} 
                         choice={playerChoice}
                         result={result === 'YOU WIN'}
                       />
-                    <p>YOU PICKED</p>
+                    </span>
                   </div>
-
                   {isFinished &&
                   <div className={styles.resultContainer}>
                         <p>{result}</p>
@@ -140,25 +142,29 @@ export default function Home({scoreCookie}: HomeProps) {
                         </button>
                   </div>
                   }
-
                   <div className={styles.computerChoiceContainer}>
-                      {!computerChoice ? <span/>
-                      :
-                      <Button 
-                        disable={isPlaying} 
-                        choice={computerChoice}
-                        result={result === 'YOU LOSE'}
-                      />
-                      }
-                      <p>THE HOUSE PICKED</p>
+                    <p>THE HOUSE PICKED</p>
+                    {!computerChoice ? <span/>
+                    :
+                    <Button 
+                      disable={isPlaying} 
+                      choice={computerChoice}
+                      result={result === 'YOU LOSE'}
+                    />
+                    }
                   </div>
                 </div>
-
-                
               </div>
               
             }
           </main>
+          <footer>
+              <button type="button" className={styles.rulesButton} onClick={toggleModal}>
+                RULES
+              </button>
+          </footer>
+
+          <RulesModal toggleModal={toggleModal} showModal={showModal}/>
     </div>
   )
 }
