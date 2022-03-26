@@ -38,25 +38,22 @@ border: transparent;
 animation: ripple 2s linear infinite;
 }
 
-.buttonContainer.paper{
-
-box-shadow: 
-    0px -3px 0 10px #5671f5,
-    0 0 0 13px #4865f4,
-    inset 0px 2px 0 2px #d6d6d6;
-margin-right: 2rem;
+.paper{
+    box-shadow: 
+        0px -3px 0 10px #5671f5,
+        0 0 0 13px #4865f4,
+        inset 0px 2px 0 2px #d6d6d6;
+    margin-right: 2rem;
 }
 
-.buttonContainer.scissors{
-
+.scissors{
 box-shadow: 
     0px -3px 0 10px hsl(40, 84%, 53%),
     0 0 0 13px hsl(39, 89%, 49%),
     inset 0px 2px 0 2px #d6d6d6;
 }
 
-.buttonContainer.rock{
-
+.rock{
 justify-self: center;
 box-shadow: 
     0px -3px 0 10px hsl(349, 70%, 56%),

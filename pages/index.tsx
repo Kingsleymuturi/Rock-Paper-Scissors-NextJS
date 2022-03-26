@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Cookies from 'js-cookie';
 import { GetServerSideProps } from 'next';
-import  '../styles/Index.module.css';
+import styles from '../styles/Index.module.css';
 import { Button } from '../components/button';
 
 interface HomeProps{
@@ -97,27 +97,27 @@ export default function Home({scoreCookie}: HomeProps) {
   },[score])
 
   return (
-    <div className="container">
+    <div className={styles.container}>
           <header>
               <img src="/logo.svg" alt="Rock Paper Scissors"/>
 
-              <div className="scoreContainer">
+              <div className={styles.scoreContainer}>
                 <p>SCORE</p>
                 <span>{score}</span>
               </div>
           </header>
 
-          <main className="main">
+          <main className={styles.main}>
             {!isPlaying ?
-              <div className="pickContainer">
+              <div className={styles.pickContainer}>
                 <Button disable={isPlaying} beginPlay={beginPlay} choice="paper"/>
                 <Button disable={isPlaying} beginPlay={beginPlay} choice="scissors"/>
                 <Button disable={isPlaying} beginPlay={beginPlay} choice="rock"/>
               </div>
               :
-              <div className="gamingWrapper">
-                <div className="gamingContainer">
-                  <div className="playerChoiceContainer">
+              <div className={styles.gamingWrapper}>
+                <div className={styles.gamingContainer}>
+                  <div className={styles.playerChoiceContainer}>
                       <Button 
                         disable={isPlaying} 
                         choice={playerChoice}
@@ -127,7 +127,7 @@ export default function Home({scoreCookie}: HomeProps) {
                   </div>
 
                   {isFinished &&
-                  <div className="resultContainer">
+                  <div className={styles.resultContainer}>
                         <p>{result}</p>
                         <button type="button" onClick={reMatch}>
                           PLAY AGAIN
@@ -135,7 +135,7 @@ export default function Home({scoreCookie}: HomeProps) {
                   </div>
                   }
 
-                  <div className="computerChoiceContainer">
+                  <div className={styles.computerChoiceContainer}>
                       {!computerChoice ? <span/>
                       :
                       <Button 
