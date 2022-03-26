@@ -92,7 +92,10 @@ export default function Home({scoreCookie}: HomeProps) {
     }
   },[computerChoice])
 
-  
+  useEffect(() =>{
+    Cookies.set(`scoreCookie`, String(score));
+  },[score])
+
   return (
     <div className="container">
           <header>
