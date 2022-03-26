@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { GetServerSideProps } from 'next';
 import styles from '../styles/Index.module.css';
