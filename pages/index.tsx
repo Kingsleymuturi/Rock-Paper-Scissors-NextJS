@@ -76,6 +76,14 @@ export default function Home({scoreCookie}: HomeProps) {
     }
     setIsFinished(true)
   }
+
+  function reMatch(){
+    setIsPlaying(false);
+    setComputerChoice(null);
+    setIsFinished(false);
+    setResult("DRAW");
+  }
+
   return (
     <div className="container">
           <header>
@@ -109,7 +117,7 @@ export default function Home({scoreCookie}: HomeProps) {
                   {isFinished &&
                   <div className="resultContainer">
                         <p>{result}</p>
-                        <button type="button">
+                        <button type="button" onClick={reMatch}>
                           PLAY AGAIN
                         </button>
                   </div>
