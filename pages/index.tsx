@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Cookies from 'js-cookie';
 import { GetServerSideProps } from 'next';
 import  '../styles/Index.module.css';
@@ -84,6 +84,15 @@ export default function Home({scoreCookie}: HomeProps) {
     setResult("DRAW");
   }
 
+  useEffect(()=>{
+    if(computerChoice){
+      setTimeout(()=>{
+        matchResults()
+      },1000)
+    }
+  },[computerChoice])
+
+  
   return (
     <div className="container">
           <header>
