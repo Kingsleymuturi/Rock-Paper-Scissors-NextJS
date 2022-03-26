@@ -1,0 +1,108 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.scoreContainer{
+  width: 10rem;
+  height: 7rem;
+}
+
+.scoreContainer p{
+  font-size: 1rem;
+}
+
+.scoreContainer span{
+  font-size: 3.25rem;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.pickContainer{
+  background: url('/bg-triangle.svg') center no-repeat;
+  background-size: 80%;
+  display: grid;
+  justify-content: center;
+  gap: 2.5rem;
+  grid-template-areas: 
+    "paper scissors"
+     "rock rock"  
+  ;
+}
+
+.gamingWrapper{
+  flex: 1;
+}
+
+.gamingContainer{
+  display: grid;
+  flex: 1;
+  padding: 2.5rem;
+  grid-template-areas: 
+  "playerChoice computerChoice"
+    "result result"
+  ;
+}
+
+.playerChoiceContainer{
+  margin-right: 2rem;
+  grid-area: playerChoice;
+}
+
+.resultContainer{
+  grid-area: result;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.resultContainer p{
+  font-weight: 700;
+  font-size: 2.56rem;
+  color: var(--white);
+}
+
+.resultContainer button{
+  height: 3rem;
+  width: 13.62rem;
+  border-radius: 10px;
+  border: none;
+  margin-top: 1.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.playerChoiceContainer,.computerChoiceContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.playerChoiceContainer button{
+  margin-right: 0;
+}
+
+.computerChoiceContainer button{
+  margin-right: 0;
+}
+.computerChoiceContainer{
+  grid-area: computerChoice;
+}
+.computerChoiceContainer span{
+  height: 6.25rem;
+  width: 6.25rem;
+  border-radius: 50%;
+  background-color: var(--dark-text);
+} 
+.computerChoiceContainer p{
+  color: var(--white);
+}

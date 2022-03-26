@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css';
+import '../styles/Button.module.css';
 
 interface ButtonProps{
     beginPlay?: (choice: 'rock' | 'paper' | 'scissors') => void;
@@ -9,12 +9,12 @@ interface ButtonProps{
 
 export function Button({beginPlay, choice, result, disable} : ButtonProps){
     return(
-        <div className={styles.buttonContainer}>
+        <div className="buttonContainer">
             <button disabled = {disable} type="button"
                 className={
-                    choice === 'rock'? styles.rock:
-                    choice === 'paper'? styles.paper:
-                    styles.scissors
+                    choice === 'rock'? "rock":
+                    choice === 'paper'? "paper":
+                    "scissors"
                 }
                 onClick={() => beginPlay(choice)}>
                 <img src={`/icon-${choice}.svg`}/>
