@@ -158,3 +158,60 @@
   border-radius: 5px;
   font-size: 10px;
 }
+
+@media(min-width: 1366px){
+  .container{
+    align-items: center;
+  }
+  .container header{
+    width: 43.56rem;
+  }
+  .container img{
+    height: 5.6rem;
+  }
+
+  .scoreContainer{
+    width: 10rem;
+    height: 7rem;
+  }
+  .scoreContainer p{
+    font-size: 1rem;
+  }
+
+  .scoreContainer span{
+    font-size: 3.25rem;
+  }
+
+  .container main{
+    align-items: flex-start;
+  }
+  .pickContainer{
+    gap:3.5rem;
+  }
+
+  .gamingContainer{
+    align-items: center;
+    gap: 3rem;
+    grid-template-areas: 
+    "playerChoice result houseChoice"
+    ;
+  }
+
+  .resultContainer{
+    margin: 0;
+  }
+
+  .playerChoiceContainer,
+  .houseChoiceContainer
+  {
+    margin: 0;
+    flex-direction: column-reverse;
+  }
+
+  .container footer{
+    position: absolute;
+    bottom: 0;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}

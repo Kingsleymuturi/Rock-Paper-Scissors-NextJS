@@ -29,6 +29,21 @@ background-color: #efefef;
 cursor: initial;
 }
 
+@keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0rem rgba(rgba(255,255,255, 0.1), 0.1),
+                  0 0 0 1rem rgba(rgba(255,255,255, 0.1), 0.1),
+                  0 0 0 2rem rgba(rgba(255,255,255, 0.1), 0.1),
+                  0 0 0 5rem rgba(rgba(255,255,255, 0.1), 0.1);
+    }
+    100% {
+      box-shadow: 0 0 0 1rem rgba(rgba(255,255,255, 0.1), 0.1),
+                  0 0 0 2rem rgba(rgba(255,255,255, 0.1), 0.1),
+                  0 0 0 5rem rgba(rgba(255,255,255, 0.1), 0.1),
+                  0 0 0 8rem rgba(rgba(255,255,255, 0.1), 0);
+    }
+}
+
 .buttonContainer span{
 position: absolute;
 height: 6.25rem;
@@ -59,4 +74,24 @@ box-shadow:
     0px -3px 0 10px hsl(349, 70%, 56%),
     0 0 0 13px hsl(349, 71%, 52%),
     inset 0px 2px 0 2px #d6d6d6;
+}
+
+@media(min-width: 1366px){
+    .buttonContainer button{
+        height: 9rem;
+        width: 9rem;
+    }
+    .buttonContainer img{
+    height: 50%;
+    }
+
+    .paper{
+        box-shadow: 0px -4px 0 15px #5671f5, 0px 4px 0 15px #4865f4, inset 0px 5px 0 3px #d6d6d6;
+    }
+    .scissors{
+        box-shadow: 0px -4px 0 15px #eca922, 0px 4px 0 15px #ec9e0e, inset 0px 5px 0 3px #d6d6d6;
+    }
+    .rock{
+        box-shadow: 0px -4px 0 15px #dd405d, 0px 4px 0 15px #dc2e4e, inset 0px 5px 0 3px #d6d6d6;
+    }
 }

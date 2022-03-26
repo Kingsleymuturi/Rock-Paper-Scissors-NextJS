@@ -76,4 +76,34 @@
 .modalAnimationClose{
     animation: close 0.8s linear forwards;
 }
-  
+
+@media(min-width: 1366px){
+    .modalContainer{
+        transition: visibility 0.8s;
+    }
+    .rulesContainer{
+        height: 25.93rem;
+        width: 24.87rem;
+        border-radius: 20px;
+        padding: 1.5rem;
+        position: relative;
+        justify-content: center;
+    }
+    .rulesContainer p{
+    font-size: 1.56rem;
+    position: absolute;
+    left: 2rem;
+    top: 1.5rem;
+    }
+      
+    .rulesContainer img{
+    max-width: 100%;
+    height: 16.86rem;
+    }
+      
+    .rulesContainer button{
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    }
+}
