@@ -125,14 +125,12 @@ export default function Home({scoreCookie}: HomeProps) {
               <div className={styles.gamingWrapper}>
                 <div className={styles.gamingContainer}>
                   <div className={styles.playerChoiceContainer}>
-                    <p>YOU PICKED</p>
-                    <span>
                       <Button 
                         disable={isPlaying} 
                         choice={playerChoice}
                         result={result === 'YOU WIN'}
                       />
-                    </span>
+                      <p>YOU PICKED</p>
                   </div>
                   {isFinished &&
                   <div className={styles.resultContainer}>
@@ -143,7 +141,6 @@ export default function Home({scoreCookie}: HomeProps) {
                   </div>
                   }
                   <div className={styles.computerChoiceContainer}>
-                    <p>THE HOUSE PICKED</p>
                     {!computerChoice ? <span/>
                     :
                     <Button 
@@ -152,6 +149,7 @@ export default function Home({scoreCookie}: HomeProps) {
                       result={result === 'YOU LOSE'}
                     />
                     }
+                    <p>THE HOUSE PICKED</p>
                   </div>
                 </div>
               </div>

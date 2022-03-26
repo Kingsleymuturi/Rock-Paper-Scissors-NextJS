@@ -5,28 +5,28 @@
     justify-content: center;
 }
 .buttonContainer:nth-child(1){
-grid-area: paper;
+    grid-area: paper;
 }
 .buttonContainer:nth-child(2){
-grid-area: scissors;
+    grid-area: scissors;
 }
 .buttonContainer:nth-child(3){
-grid-area: rock;
+    grid-area: rock;
 }
 
 .buttonContainer button{
-height: 6.25rem;
-width: 6.25rem;
-border-radius: 50%;
-position: relative;
-border: none;
-position: relative;
+    height: 6.25rem;
+    width: 6.25rem;
+    border-radius: 50%;
+    position: relative;
+    border: none;
+    position: relative;
 
-z-index: 5;
+    z-index: 5;
 }
 .buttonContainer button:disabled{
-background-color: #efefef;
-cursor: initial;
+    background-color: #efefef;
+    cursor: initial;
 }
 
 @keyframes ripple {
@@ -45,12 +45,12 @@ cursor: initial;
 }
 
 .buttonContainer span{
-position: absolute;
-height: 6.25rem;
-width: 6.25rem;
-border-radius: 50%;
-border: transparent;
-animation: ripple 2s linear infinite;
+    position: absolute;
+    height: 6.25rem;
+    width: 6.25rem;
+    border-radius: 50%;
+    border: transparent;
+    animation: ripple 2s linear infinite;
 }
 
 .paper{

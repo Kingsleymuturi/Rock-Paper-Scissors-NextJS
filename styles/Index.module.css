@@ -10,15 +10,13 @@
   justify-content: space-between;
   align-items: center;
   border: 4px solid var(--header-outline);
-  margin-top: 4rem;
-  margin-left: 15rem;
-  margin-right: 15rem;
+  margin: 2rem;
   border-radius: 10px;
   padding: 0.68rem;
 }
 
 .container header img{
-  height: 4rem;
+  height: 2.94rem;
 }
 
 .container p{
@@ -27,7 +25,7 @@
 
 .scoreContainer{
   background-color: white;
-  width: 6.5rem;
+  width: 4.75rem;
   height: 4.75rem;
   display: flex;
   justify-content: center;
@@ -62,8 +60,8 @@
   gap: 2.5rem;
   grid-template-areas: 
     "paper scissors"
-     "rock rock"  
-  ;
+      "rock rock"  
+    ;
 }
 
 .gamingWrapper{
@@ -71,12 +69,9 @@
 }
 
 .gamingContainer{
-  display: flex;
-  padding-left: 17.5rem;
-  padding-right: 10.5rem;
-  padding-bottom: 10.5rem;
-  padding-top: 5rem;
-  align-items: center;
+  display: grid;
+  flex: 1;
+  padding: 2.5rem;
   grid-template-areas: 
   "playerChoice computerChoice"
     "result result"
@@ -85,7 +80,7 @@
 
 .playerChoiceContainer{
   grid-area: playerChoice;
-  padding-right: 5rem;
+  margin-right: 2rem;
 }
 
 .resultContainer{
@@ -93,6 +88,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 4rem;
 }
 
 .resultContainer p{
@@ -102,14 +98,13 @@
 }
 
 .resultContainer button{
-  height: 2rem;
-  width: 10rem;
-  border-radius: 5px;
+  height: 3rem;
+  width: 13.62rem;
+  border-radius: 10px;
   border: none;
   margin-top: 1.65rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color:var(--score-text);
 }
 
 .playerChoiceContainer,.computerChoiceContainer{
@@ -127,7 +122,6 @@
 }
 .computerChoiceContainer{
   grid-area: computerChoice;
-  padding-left: 5rem;
 }
 .computerChoiceContainer span{
   height: 6.25rem;
@@ -141,22 +135,18 @@
 
 .container footer{
   display: flex;
-  justify-content: right;
+  justify-content: center;
   padding: 3.5rem;
-  float: left;
 }
 
 .rulesButton{
-  border: 0.5px solid white;
+  border: 4px solid var(--header-outline);
   background: transparent;
-  height: 2.1rem;
+  height: 2.38rem;
+  width: auto;
   color: white;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  padding-left: 3.5%;
-  padding-right: 3.5%;
+  padding: 0 2.38rem;
   border-radius: 5px;
-  font-size: 10px;
 }
 
 @media(min-width: 1366px){
@@ -193,7 +183,7 @@
     align-items: center;
     gap: 3rem;
     grid-template-areas: 
-    "playerChoice result houseChoice"
+    "playerChoice result computerChoice"
     ;
   }
 
@@ -202,7 +192,7 @@
   }
 
   .playerChoiceContainer,
-  .houseChoiceContainer
+  .computerChoiceContainer
   {
     margin: 0;
     flex-direction: column-reverse;

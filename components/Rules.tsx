@@ -11,15 +11,11 @@ export function RulesModal({toggleModal, showModal}: ModalProps){
         <div className={styles.modalContainer}
             style={showModal ? {visibility:"visible"} : {visibility:"hidden"} }>
             <div className={`${styles.rulesContainer} ${showModal ? styles.modalAnimationShowUp : styles.modalAnimationClose}`}>
-                <p>RULES
-                    <button type="button" onClick={toggleModal}>
-                        <img src="/icon-close.svg" alt="Close"/>
-                    </button>
-                </p>
-                <span>
-                    <img src="/image-rules.svg" alt="Rules"/>
-                </span>
-
+            <p>RULES</p>
+            <img src="/image-rules.svg" alt="Rules"/>
+            <button type="button" onClick={toggleModal}>
+                <img src="/icon-close.svg" alt="Close"/>
+            </button>
             </div>
        </div>
     )
