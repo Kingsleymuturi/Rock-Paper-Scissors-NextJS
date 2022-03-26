@@ -95,6 +95,7 @@ export default function Home({scoreCookie}: HomeProps) {
   useEffect(() =>{
     Cookies.set(`scoreCookie`, String(score));
   },[score])
+  
 
   return (
     <div className={styles.container}>
