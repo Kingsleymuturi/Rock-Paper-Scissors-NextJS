@@ -19,10 +19,6 @@
   height: 2.94rem;
 }
 
-.container p{
-  color: white;
-}
-
 .scoreContainer{
   background-color: white;
   width: 4.75rem;
@@ -81,6 +77,10 @@
 .playerChoiceContainer{
   grid-area: playerChoice;
   margin-right: 2rem;
+}
+
+.playerChoiceContainer{
+  color: white;
 }
 
 .resultContainer{
