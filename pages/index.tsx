@@ -106,7 +106,7 @@ export default function Home({scoreCookie}: HomeProps) {
   return (
     <div className={styles.container}>
           <header>
-              <img src="/logo.svg" alt="Rock Paper Scissors"/>
+              <img className={styles.headerImage} src="/logo.svg" alt="Rock Paper Scissors"/>
 
               <div className={styles.scoreContainer}>
                 <p>SCORE</p>
