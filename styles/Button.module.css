@@ -29,21 +29,6 @@
     cursor: initial;
 }
 
-@keyframes ripple {
-    0% {
-      box-shadow: 0 0 0 0rem rgba(rgba(255,255,255, 0.1), 0.1),
-                  0 0 0 1rem rgba(rgba(255,255,255, 0.1), 0.1),
-                  0 0 0 2rem rgba(rgba(255,255,255, 0.1), 0.1),
-                  0 0 0 5rem rgba(rgba(255,255,255, 0.1), 0.1);
-    }
-    100% {
-      box-shadow: 0 0 0 1rem rgba(rgba(255,255,255, 0.1), 0.1),
-                  0 0 0 2rem rgba(rgba(255,255,255, 0.1), 0.1),
-                  0 0 0 5rem rgba(rgba(255,255,255, 0.1), 0.1),
-                  0 0 0 8rem rgba(rgba(255,255,255, 0.1), 0);
-    }
-}
-
 .buttonContainer span{
     position: absolute;
     height: 6.25rem;
@@ -75,6 +60,19 @@ box-shadow:
     0 0 0 13px hsl(349, 71%, 52%),
     inset 0px 2px 0 2px #d6d6d6;
 }
+
+@keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 .7rem rgba(255,255,255, 0.2),
+                  0 0 0 1.5rem rgba(255,255,255, 0.2),
+                  0 0 0 5rem rgba(255,255,255, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 1.5rem rgba(255,255,255, 0.2),
+                  0 0 0 4rem rgba(255,255,255, 0.2),
+                  0 0 0 8rem rgba(255,255,255, 0);
+    }
+  }
 
 @media(min-width: 1366px){
     .buttonContainer button{
